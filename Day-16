@@ -1,0 +1,22 @@
+
+      Node *insert(Node *head, int data) {
+        Node *temp = head;
+        if (head == NULL) {
+            temp = new Node(data);
+          temp->next = NULL;
+          temp->data = data;
+          head = temp;
+          return head;
+
+        } 
+          while (temp->next != NULL) {
+            temp = temp->next;
+          }
+          Node *r = new Node(data);
+          r->data = data;
+          r->next = NULL;
+          temp->next = r;
+          return head;
+        
+      }
+
